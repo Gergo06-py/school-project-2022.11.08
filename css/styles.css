@@ -8,5 +8,85 @@
 }
 
 body {
+    background: #bac5dd;
     font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background: url("../img/picture1.jpg") center center no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+header > h1 {
+    position: relative;
+    top: 1em;
+    left: 1em;
+    font-size: 4rem;
+    color: #fff;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #5473b4;
+    height: 3em;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+nav > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+nav a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav > ul > li:hover > a {
+    text-decoration: underline solid 1px #fff;
+    text-underline-offset: 4px;
+}
+
+main {
+    background: #fff;
+}
+
+.content {
+    background: lightgrey;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content img {
+    width: 100%;
+    grid-row: span 2;
+}
+
+footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    height: 150px;
 }
