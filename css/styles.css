@@ -13,8 +13,8 @@ body {
 }
 
 .container {
-    max-width: 1200px;
     width: 80%;
+    min-width: 600px;
     margin: 0 auto;
 }
 
@@ -68,23 +68,25 @@ nav > ul > li:hover > a {
 }
 
 main {
-    background: #fff;
-}
-
-.content {
     background: lightgrey;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
 }
 
-.content img {
+article {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+}
+
+article img {
     width: 100%;
-    grid-row: span 2;
+}
+
+article .content {
+    padding: 10px;
 }
 
 footer {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
